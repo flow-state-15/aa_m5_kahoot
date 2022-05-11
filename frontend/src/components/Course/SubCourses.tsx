@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -8,24 +7,35 @@ import Avatar from "@mui/material/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import WorkIcon from "@mui/icons-material/Work";
 import BeachAccessIcon from "@mui/icons-material/BeachAccess";
-import SubCourses from "./SubCourses";
+import SubKahoots from "./SubKahoots";
 import { useState } from "react";
 
-export default function Course() {
+export default function SubCourses() {
   const [openCourses, setOpenCourses] = useState(false);
   console.log(openCourses);
 
   return (
     <>
-    <List sx={{ width: "20%", maxWidth: 360, bgcolor: "background.paper", cursor: "pointer" }}>
+
+    <List
+      sx={{
+        width: "20%",
+        maxWidth: 360,
+        bgcolor: "background.paper",
+        marginLeft: 4,
+        marginTop: 4,
+        cursor: "pointer"
+      }}
+    >
+      <h1 style={{marginLeft: 15}} >Courses</h1>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
             <ImageIcon onClick={() => setOpenCourses(!openCourses)} />
           </Avatar>
-          {openCourses && <SubCourses />}
+          {openCourses && <SubKahoots />}
         </ListItemAvatar>
-        <ListItemText primary="FT" />
+        <ListItemText primary="Mod 1" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -33,7 +43,7 @@ export default function Course() {
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="PT" />
+        <ListItemText primary="Mod 2" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -41,7 +51,7 @@ export default function Course() {
             <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="NY" />
+        <ListItemText primary="Mod 3" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -49,9 +59,33 @@ export default function Course() {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="SF" />
+        <ListItemText primary="Mod 4" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <ImageIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Mod 5" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <ImageIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Mod 6" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <ImageIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Mod 7" />
       </ListItem>
     </List>
     </>
   );
-};
+}
