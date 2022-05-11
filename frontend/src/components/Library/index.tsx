@@ -1,11 +1,11 @@
 import { Link, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Library() {
 
     const [searchInput, setSearchInput] = useState("");
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
         setSearchInput(e.target.value);
     };
