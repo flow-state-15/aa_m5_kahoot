@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Library from './components/Library';
 import CreateQuiz from './components/CreateQuiz';
 import Counter from './components/features/counter';
+import Course from './components/Course';
 
 import './App.css';
 
