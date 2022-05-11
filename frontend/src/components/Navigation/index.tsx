@@ -18,35 +18,33 @@ export default function Navigation() {
 
     const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
-
-        const button: HTMLButtonElement = event.currentTarget;
-        setClickedButton(button.name);
-      };
+        console.log("ADD A TOGGLE")
+    };
 
     return (
         <>
             <Nav>
                 <NavbarContainer>
                     <NavLogo href='/'>Logo</NavLogo>
-                    <MobileIcon onClick={buttonHandler}>
+                    <MobileIcon onClick={(event) => buttonHandler(event as any)}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks href="/about">About</NavLinks>
+                            <NavLinks href="/library">Library</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks href="/discover">Discover</NavLinks>
+                            <NavLinks href="/counter">Counter?</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks href="/service">Service</NavLinks>
+                            <NavLinks href="/createquiz">Create a Quiz</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks href="/signup">Sign Up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink href="/signin">Sign In</NavBtnLink>
+                        <NavBtnLink href="/login">Log In</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
