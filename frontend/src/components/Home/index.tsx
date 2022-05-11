@@ -1,17 +1,21 @@
 import React from "react";
+import ModuleCard from './ModuleCard'
+import HowToUse from "./HowToUse";
 
 export default function Home(): JSX.Element {
     return (
         <div className="home-root">
             <h2>This is the Home Component</h2>
-            <div>Mod 1</div>
-            <div>Mod 2</div>
-            <div>Mod 3</div>
-            <div>Mod 4</div>
-            <div>Mod 5</div>
-            <div>Mod 6</div>
-            <div>Mod 7</div>
-            <div><h2>How to use</h2></div>
+            <div className="card-container">
+                <ModuleCard content='Module 1' />
+                <ModuleCard content='Module 2' />
+                <ModuleCard content='Module 3' />
+                <ModuleCard content='Module 4' />
+                <ModuleCard content='Module 5' />
+                <ModuleCard content='Module 6' />
+                <ModuleCard content='Module 7' />
+            </div>
+            <HowToUse />
         </div>
     );
 }
