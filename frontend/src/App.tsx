@@ -21,6 +21,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/library" element={<Library />} />
           <Route path="/counter" element={<CounterLogic />} />
+          <Route path="/createquiz" element={<CreateQuiz />} />
         </Routes>
       </BrowserRouter>
     </>
