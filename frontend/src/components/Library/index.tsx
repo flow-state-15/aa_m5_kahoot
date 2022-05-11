@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 import SideNavBar from "../SideNavbar/SideNavBar";
 import Courses from "../Courses";
 import Kahoots from "../Kahoots";
-import LibraryBar from "./LibraryBar";
+
 
 const Wrapper = styled("div")({
   background: "white",

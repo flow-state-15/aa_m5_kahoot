@@ -7,7 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import CommentIcon from "@mui/icons-material/Comment";
-import LibraryBar from "../Library/LibraryBar";
+import SideNavSearch from "../SideNavbar/SideNavSearch";
 export default function Courses() {
   const [checked, setChecked] = React.useState([0]);
 
@@ -26,8 +26,8 @@ export default function Courses() {
 
   return (
     <>
-    <LibraryBar />
-      <h3>Course Name</h3>
+      <h3>Courses</h3>
+      <SideNavSearch />
       <List sx={{ width: "100%", maxWidth: 860, bgcolor: "background.paper" }}>
         {[0, 1, 2, 3, 4, 5, 6].map((value) => {
           const labelId = `checkbox-list-label-${value}`;

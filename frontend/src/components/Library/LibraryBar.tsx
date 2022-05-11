@@ -2,7 +2,7 @@ import * as React from "react";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Link } from "react-router-dom";
-
+import SideNavSearch from "../SideNavbar/SideNavSearch";
 export default function LibraryBar() {
   const [alignment, setAlignment] = React.useState("web");
 
@@ -14,21 +14,24 @@ export default function LibraryBar() {
   };
 
   return (
-    <ToggleButtonGroup
-      color="primary"
-      value={alignment}
-      exclusive
-      onChange={handleChange}
-      style={{marginLeft: "5rem", marginTop: "2rem", marginBottom: "2rem"}}
-    >
-      <ToggleButton value="recent">
-        {" "}
-        <Link to="all"> Recent</Link>{" "}
-      </ToggleButton>
-      <ToggleButton value="drafts">Drafts</ToggleButton>
-      <ToggleButton value="favorites">Favorites</ToggleButton>
-      <ToggleButton value="shared">Shared with me</ToggleButton>
-    </ToggleButtonGroup>
+    <>
+      <ToggleButtonGroup
+        color="primary"
+        value={alignment}
+        exclusive
+        onChange={handleChange}
+        style={{ marginLeft: "5rem", marginTop: "2rem", marginBottom: "2rem" }}
+      >
+        <ToggleButton value="recent">
+          {" "}
+          <Link to="/library/all"> Recent</Link>{" "}
+        </ToggleButton>
+        <ToggleButton value="drafts">Drafts</ToggleButton>
+        <ToggleButton value="favorites">Favorites</ToggleButton>
+        <ToggleButton value="shared">Shared with me</ToggleButton>
+        <SideNavSearch />
+      </ToggleButtonGroup>
+    </>
   );
 }
 
