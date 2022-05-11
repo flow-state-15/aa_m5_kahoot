@@ -15,6 +15,8 @@ export default function SubCourses() {
   console.log(openCourses);
 
   return (
+    <>
+
     <List
       sx={{
         width: "20%",
@@ -25,6 +27,7 @@ export default function SubCourses() {
         cursor: "pointer"
       }}
     >
+      <h1 style={{marginLeft: 15}} >Courses</h1>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
@@ -83,5 +86,6 @@ export default function SubCourses() {
         <ListItemText primary="Mod 7" />
       </ListItem>
     </List>
+    </>
   );
 }

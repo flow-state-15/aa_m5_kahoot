@@ -25,6 +25,8 @@ export default function SubKahoots() {
   };
 
   return (
+    <>
+    <h1 style={{marginLeft: 130}}>Kahoots</h1>
     <List
       sx={{
         width: "100%",
@@ -67,5 +69,6 @@ export default function SubKahoots() {
         );
       })}
     </List>
+    </>
   );
 }

@@ -15,6 +15,7 @@ export default function Course() {
   console.log(openCourses);
 
   return (
+    <>
     <List sx={{ width: "20%", maxWidth: 360, bgcolor: "background.paper", cursor: "pointer" }}>
       <ListItem>
         <ListItemAvatar>
@@ -50,5 +51,6 @@ export default function Course() {
         <ListItemText primary="SF" />
       </ListItem>
     </List>
+    </>
   );
 }
