@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import Library from './components/Library';
 import CounterLogic from './components/features/counter/Counter';
 import CreateQuiz from './components/CreateQuiz';
+import Course from './components/Course';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <h1>APP ROOT</h1>
       <BrowserRouter>
         <Navigation />
+        <Course />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

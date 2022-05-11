@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/flow-state-15/react-redux-express-demo/issues"
   },
-  "homepage": "https://github.com/flow-state-15/react-redux-express-demo#readme"
+  "homepage": "https://github.com/flow-state-15/react-redux-express-demo#readme",
+  "dependencies": {
+    "@material/drawer": "^14.0.0"
+  }
 }
