@@ -2,13 +2,13 @@ import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import {useState } from 'react';
-import SideNavMain from "./SideNavMain";
+import { Link } from "react-router-dom";
 
 
 const Wrapper = styled("div")({
   background: "white",
   position: "fixed",
-  top: 70,
+  top: 60,
   left: 70,
   width: "200px",
   height: "100%",
@@ -23,21 +23,21 @@ const MenuItem = styled("h3")({
   cursor: "pointer",
 });
 
-export default function SideNavBarTwo() {
+export default function SideNavBarTwo({location}) {
 
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   return (
     <Wrapper>
       <div>
-        <MenuItem onClick={() => setOpen(!open)}>
+        <MenuItem>
           <MenuIcon  fontSize="small" style={{marginRight: '10px'}}/>
-          Kahoots
+           <Link to='/library/all'>Kahoots </Link>
         </MenuItem>
-        {open && <SideNavMain />}
         <MenuItem>
           <LibraryBooksIcon fontSize="small" style={{marginRight: '10px'}}/>
-          Courses
+          <Link to='/library/courses'>Courses </Link>
         </MenuItem>
+        <h3>Current: {location}</h3>
       </div>
     </Wrapper>
   );

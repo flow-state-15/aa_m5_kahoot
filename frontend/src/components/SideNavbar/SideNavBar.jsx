@@ -9,6 +9,7 @@ const Wrapper = styled("div")({
   left: 0,
   width: "70px",
   height: "100%",
+  zIndex: "100",
   // padding: "20px 0",
 });
 
@@ -33,17 +34,20 @@ const ButtonOne = styled("button")({
 });
 
 export default function SideNavBar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState("FT");
 
   return (
     <>
       <Wrapper>
         <Sidebar>
-          <ButtonOne onClick={() => setOpen(!open)}>FT</ButtonOne>
-          {open && <SideNavBarTwo />}
-          <ButtonOne>PT</ButtonOne>
-          <ButtonOne>NY</ButtonOne>
-          <ButtonOne>SF</ButtonOne>
+          <ButtonOne onClick={() => setOpen("FT")}>FT</ButtonOne>
+          {open === 'FT' && <SideNavBarTwo location={open} />}
+          <ButtonOne onClick={() => setOpen("PT")} >PT</ButtonOne>
+          {open === 'PT' && <SideNavBarTwo location={open} />}
+          <ButtonOne onClick={() => setOpen("NY")} >NY</ButtonOne>
+          {open === 'NY' && <SideNavBarTwo location={open} />}
+          <ButtonOne onClick={() => setOpen("SF")} >SF</ButtonOne>
+          {open === 'SF' && <SideNavBarTwo location={open} />}
         </Sidebar>
       </Wrapper>
     </>

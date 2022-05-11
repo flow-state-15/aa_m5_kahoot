@@ -3,8 +3,8 @@ import { styled } from "@mui/material/styles";
 const Wrapper = styled("div")({
   background: "white",
   position: "fixed",
-  top: 70,
-  left: 260,
+  top: 60,
+  left: 90,
   width: "100%",
   height: "100%",
   borderRadius: "1px",
