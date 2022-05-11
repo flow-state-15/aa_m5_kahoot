@@ -3,7 +3,7 @@ import { useState } from "react";
 import SideNavBarTwo from "./SideNavBarTwo";
 
 const Wrapper = styled("div")({
-  background: "rgb(5, 68, 104)",
+  background: "white",
   position: "fixed",
   top: 0,
   left: 0,

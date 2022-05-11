@@ -37,7 +37,7 @@ export default function SideNavBarTwo({location}) {
           <LibraryBooksIcon fontSize="small" style={{marginRight: '10px'}}/>
           <Link to='/library/courses'>Courses </Link>
         </MenuItem>
-        <h3>Current: {location}</h3>
+        {/* <h3>Current: {location}</h3> */}
       </div>
     </Wrapper>
   );
