@@ -1,12 +1,7 @@
-'use strict';
-const { Model } = require('sequelize');
+// import { Model } from 'sequelize';
 module.exports = (sequelize, DataTypes) => {
-  class Answer extends Model {
-    static associate(models) {
-      Answer.belongsTo(models.Question, { foreignKey: 'questionId' });
-    }
-  }
-  Answer.init(
+  const Answer = sequelize.define(
+    'Answer',
     {
       title: {
         type: DataTypes.STRING,
@@ -72,5 +67,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: 'Answer',
     },
   );
+  Answer.associate = function (models) {
+    Answer.belongsTo(models.Question, { foreignKey: 'questionId' });
+  };
   return Answer;
 };
