@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import SideNavBar from "../SideNavbar/SideNavBar";
+
 
 export default function SingleKahootPage() {
   const { kahootId } = useParams();

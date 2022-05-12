@@ -18,7 +18,11 @@ const Wrapper = styled("div")({
 }
 });
 
-export default function SingleKahootListItem({ kahoot }) {
+interface SingleKahootProp {
+  kahoot: string;
+}
+
+export default function SingleKahootListItem(props: SingleKahootProp) {
   return (
     <Wrapper>
       <img
@@ -26,7 +30,7 @@ export default function SingleKahootListItem({ kahoot }) {
         alt="kahoot"
         style={{ height: "100%", width: "125px" }}
       ></img>
-      <h3 style={{ marginLeft: "15px"}}>{kahoot}</h3>
+      <h3 style={{ marginLeft: "15px"}}>{props.kahoot}</h3>
     </Wrapper>
   );
 }
