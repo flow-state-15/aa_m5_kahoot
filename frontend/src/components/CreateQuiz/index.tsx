@@ -1,7 +1,19 @@
+import { styled } from '@mui/material/styles';
+
+const BackgroundDiv = styled('div')({
+    backgroundColor: 'lightgray',
+    width: '100vw',
+    height: '100vh',
+});
+
+const QuestionInput = styled('input')({
+    
+})
+
 export default function CreateQuiz() {
     return (
-        <div className="create-quiz">
+        <BackgroundDiv className="create-quiz">
             <h2>This is the CreateQuiz Component</h2>
-        </div>
+        </BackgroundDiv>
     );
 }
