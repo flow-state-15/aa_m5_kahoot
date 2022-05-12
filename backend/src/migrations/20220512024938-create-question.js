@@ -1,42 +1,43 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('questions', {
+    await queryInterface.createTable('Questions', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       timeLimit: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
       },
       richText: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       image: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       maxPoints: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
       },
       quizId: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
+        references: { model: 'Quizzes' },
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('questions');
-  }
+    await queryInterface.dropTable('Questions');
+  },
 };

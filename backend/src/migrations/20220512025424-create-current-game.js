@@ -1,36 +1,38 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('currentGames', {
+    await queryInterface.createTable('Current_Games', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       hostId: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
+        references: { model: 'Internal_Users' },
       },
       quizId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        references: { model: 'Quizzes' },
       },
       currentQuestion: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       pin: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('currentGames');
-  }
+    await queryInterface.dropTable('Current_Games');
+  },
 };

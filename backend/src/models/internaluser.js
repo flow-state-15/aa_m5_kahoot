@@ -1,25 +1,21 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class internalUser extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+  class Internal_User extends Model {
     static associate(models) {
-      // define association here
+      Internal_User.hasMany(models.Current_Game, { foreignKey: 'hostId' });
     }
   }
-  internalUser.init({
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    oauth: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'internalUser',
-  });
-  return internalUser;
+  Internal_User.init(
+    {
+      name: DataTypes.STRING,
+      email: DataTypes.STRING,
+      oauth: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: 'Internal_User',
+    },
+  );
+  return Internal_User;
 };
