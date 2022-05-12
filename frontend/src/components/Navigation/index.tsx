@@ -14,11 +14,16 @@ import {
 
 // import { Link, Button } from '@mui/material';
 
-export default function Navigation() {
+type MyProps = {
+    toggle?: () => void;
+}
+
+export default function Navigation(props: MyProps) {
+
+    console.log(props.toggle)
 
     const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
-        console.log("ADD A TOGGLE")
     };
 
     return (
@@ -26,7 +31,7 @@ export default function Navigation() {
             <Nav>
                 <NavbarContainer>
                     <NavLogo href='/'>Logo</NavLogo>
-                    <MobileIcon onClick={(event) => buttonHandler(event as any)}>
+                    <MobileIcon onClick={props.toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>

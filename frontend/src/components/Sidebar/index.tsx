@@ -7,29 +7,40 @@ import {
     SidebarMenu,
     SideBtnWrap,
     SidebarLink,
-    SidebarRoute
+    SidebarRoute,
+
 }
     from './SidebarElements'
 
-const Sidebar = () => {
-  return (
-    <SidebarContainer >
-            <Icon onClick={()=>console.log("toggle")}>
-                <CloseIcon />
-            </Icon>
-            <SidebarWrapper>
-                <SidebarMenu>
-                    <SidebarLink href='about' onClick={()=>console.log("toggle")}>About</SidebarLink>
-                    <SidebarLink href='discover' onClick={()=>console.log("toggle")}>Discover</SidebarLink>
-                    <SidebarLink href='services' onClick={()=>console.log("toggle")}>Services</SidebarLink>
-                    <SidebarLink href='singup' onClick={()=>console.log("toggle")}>Sign Up</SidebarLink>
-                </SidebarMenu>
-                <SideBtnWrap>
-                    <SidebarRoute href='/sign-in'>Sign In</SidebarRoute>
-                </SideBtnWrap>
-            </SidebarWrapper>
-        </SidebarContainer>
-  )
+type MyProps = {
+    isOpen?: any;
+    toggle?: any;
+}
+
+export const Sidebar = (props: MyProps) => {
+    console.log('????????', props.isOpen)
+    let Container = SidebarContainer(props.isOpen)
+
+    return (
+        <>
+            <Container>
+                <Icon onClick={props.toggle} >
+                    <CloseIcon />
+                </Icon>
+                <SidebarWrapper>
+                    <SidebarMenu>
+                        <SidebarLink href='/library' onClick={props.toggle}>Library</SidebarLink>
+                        <SidebarLink href='/counter' onClick={props.toggle}>Counter</SidebarLink>
+                        <SidebarLink href='/createquiz' onClick={props.toggle}>Create Quiz</SidebarLink>
+                        <SidebarLink href='/signup' onClick={props.toggle}>Sign Up</SidebarLink>
+                    </SidebarMenu>
+                    <SideBtnWrap>
+                        <SidebarRoute href='/sign-in'>Sign In</SidebarRoute>
+                    </SideBtnWrap>
+                </SidebarWrapper>
+            </Container>
+        </>
+    )
 }
 
 export default Sidebar
