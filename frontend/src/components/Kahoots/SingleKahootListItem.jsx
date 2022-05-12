@@ -11,6 +11,11 @@ const Wrapper = styled("div")({
   border: "solid transparent 1px",
   boxShadow: "rgba(0, 0, 0, 0.3) 0px 3px 8px",
   cursor: "pointer",
+
+  "&:hover":{
+    transition: "all 0.2s ease-in-and-out",
+    height: "95px",
+}
 });
 
 export default function SingleKahootListItem({ kahoot }) {

@@ -21,7 +21,7 @@ function App() {
           <Route path="/library/*" element={<Library />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/createquiz" element={<CreateQuiz />} />
-          <Route path="/:kahootId" element={<SingleKahootPage />}/>
+          <Route path="/kahoots/:kahootId" element={<SingleKahootPage />}/>
         </Routes>
       </BrowserRouter>
     </>

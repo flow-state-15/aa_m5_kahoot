@@ -1,5 +1,5 @@
 import LibraryBar from "../Library/LibraryBar";
-import SingleKahootListItem from "./SingleKahoot";
+import SingleKahootListItem from "./SingleKahootListItem";
 import { NavLink } from "react-router-dom";
 
 
@@ -16,8 +16,7 @@ export default function Kahoots() {
     <div className="answers">
       <LibraryBar />
       {kahoots.map((kahoot) => (
-        <NavLink key={kahoot} to={`/:kahootId`}> <SingleKahootListItem kahoot={kahoot} /> </NavLink>
-        // <SingleKahootListItem kahoot={kahoot} />
+        <NavLink key={kahoot} to={`/kahoots/${kahoot}`}> <SingleKahootListItem kahoot={kahoot} /> </NavLink>
       ))}
     </div>
   );

@@ -5,5 +5,5 @@ export default function SingleKahootPage() {
 
   const { kahootId } = useParams();
 
-  return <h1>Hello from single kahoot page</h1>;
+  return <h1>Hello from {kahootId} </h1>;
 }
