@@ -10,11 +10,9 @@ const Wrapper = styled("div")({
   width: "70px",
   height: "100%",
   zIndex: "100",
-  // padding: "20px 0",
 });
 
 const Sidebar = styled("div")({
-  // background: "rgb(5, 68, 104)",
   position: "fixed",
   top: 0,
   left: 0,
