@@ -18,6 +18,7 @@ const LoginDiv = styled('div')({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100vh',
 });
 
 const PretendForm = styled('form')({
@@ -26,7 +27,10 @@ const PretendForm = styled('form')({
 });
 
 const GoogleLogo = styled('img')({
-
+    position: 'absolute',
+    height: '1.5rem',
+    left: '28.5rem',
+    top: '21.75rem',
 });
 
 export default function Login() {
