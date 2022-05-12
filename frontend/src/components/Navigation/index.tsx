@@ -36,7 +36,7 @@ export default function Navigation(props: MyProps) {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks href="/library">Library</NavLinks>
+                            <NavLinks href="/library/all">Library</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks href="/counter">Counter?</NavLinks>

@@ -8,7 +8,11 @@ import Library from './components/Library';
 import CreateQuiz from './components/CreateQuiz';
 import Counter from './components/features/counter';
 import './App.css';
+
+import SingleKahootPage from './components/Kahoots/SingleKahootPage';
+
 import Sidebar from './components/Sidebar';
+
 
 
 
@@ -30,6 +34,7 @@ function App() {
           <Route path="/library/*" element={<Library />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/createquiz" element={<CreateQuiz />} />
+          <Route path="/kahoots/:kahootId" element={<SingleKahootPage />}/>
         </Routes>
       </BrowserRouter>
     </>

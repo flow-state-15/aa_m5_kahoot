@@ -10,11 +10,9 @@ const Wrapper = styled("div")({
   width: "70px",
   height: "100%",
   zIndex: "100",
-  // padding: "20px 0",
 });
 
 const Sidebar = styled("div")({
-  // background: "rgb(5, 68, 104)",
   position: "fixed",
   top: 0,
   left: 0,
@@ -24,13 +22,16 @@ const Sidebar = styled("div")({
 });
 
 const ButtonOne = styled("button")({
-  border: "1px outset blue",
+  border: "1px",
   backgroundColor: "white",
   height: "50px",
   width: "50px",
   cursor: "pointer",
   left: "0",
   margin: ".5rem .5rem",
+  borderRadius: "1px",
+  boxShadow: "rgba(0, 0, 0, 0.3) 0px 3px 8px",
+
 });
 
 export default function SideNavBar() {
