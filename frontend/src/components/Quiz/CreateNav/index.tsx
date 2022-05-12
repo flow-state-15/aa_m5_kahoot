@@ -25,7 +25,7 @@ const StyledButtonsDiv = styled('div')({
 export default function CreateNav() {
     return (
         <StyledNav>
-            <NavLogo>Logo</NavLogo>
+            <NavLogo href="/">Logo</NavLogo>
             <StyledButtonsDiv>
                 <Button variant="contained" color="secondary">Exit</Button>
                 <Button variant="contained" color="success">Save</Button>
