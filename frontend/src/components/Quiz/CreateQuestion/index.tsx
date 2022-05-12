@@ -4,6 +4,7 @@ const BackgroundDiv = styled('div')({
     backgroundColor: 'lightgray',
     width: '100vw',
     height: '100vh',
+    position: 'relative'
 });
 
 const StyledInput = styled('input')({
@@ -20,7 +21,7 @@ const ContainerDiv = styled('div')({
     gridTemplateRows: '1fr 1fr',
     position: 'absolute',
     bottom: '15vh',
-    width: '95vw',
+    width: '95%',
     height: '10rem',
     left: "2.5vw",
     rowGap: '1rem',

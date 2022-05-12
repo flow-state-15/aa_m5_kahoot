@@ -1,5 +1,12 @@
+import { styled } from "@mui/material"
+
+const TestText = styled("h2")({
+    color: "red",
+    position: "absolute",
+})
+
 export default function QuestionDetails() {
     return (
-        <h2>QuestionDetailsComponent</h2>
+        <TestText>QuestionDetailsComponent</TestText>
     )
 } 
