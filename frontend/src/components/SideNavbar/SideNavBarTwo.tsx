@@ -23,7 +23,11 @@ const MenuItem = styled("h3")({
   cursor: "pointer",
 });
 
-export default function SideNavBarTwo({location}) {
+interface SideNavBarProp {
+  location: string;
+}
+
+export default function SideNavBarTwo(props: SideNavBarProp) {
 
   // const [open, setOpen] = useState(false);
   return (

@@ -26,7 +26,6 @@ function App() {
         {showNav && <Navigation />}
       {showNav && <Navigation toggle={() => setIsOpen(!isOpen)}/>}
       <Sidebar isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
-        {/* <Course /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
