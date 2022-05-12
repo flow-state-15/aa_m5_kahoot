@@ -11,6 +11,7 @@ const StyledInput = styled('input')({
     textAlign: 'center',
     fontFamily: 'Montserrat, sans-serif',
     borderRadius: '5px',
+    boxShadow: '0px 5px 0px black',
 });
 
 const ContainerDiv = styled('div')({
@@ -30,35 +31,50 @@ export default function CreateQuestion() {
         <BackgroundDiv>
             <StyledInput 
                 placeholder='Start typing your question' 
-                onFocus={e => e.target.placeholder = ''} 
+                onFocus={e => {
+                    e.target.placeholder = '';
+                    e.target.style.outline = 'none';
+                }} 
                 onBlur={e => e.target.placeholder = 'Start typing your question'}
                 sx={{position: 'absolute', top: '25vh', left: '2.5vw', fontSize: '1.25rem', height: '2.5rem'}}
             />
             <ContainerDiv>
                 <StyledInput 
                     placeholder='Add answer 1' 
-                    onFocus={e => e.target.placeholder = ''} 
+                    onFocus={e => {
+                        e.target.placeholder = '';
+                        e.target.style.outline = 'none';
+                    }} 
                     onBlur={e => e.target.placeholder = 'Add answer 1'}
                     sx={{margin: 'auto', height: '6.375rem'}}
                 />
                 
                 <StyledInput 
                     placeholder='Add answer 2' 
-                    onFocus={e => e.target.placeholder = ''} 
+                    onFocus={e => {
+                        e.target.placeholder = '';
+                        e.target.style.outline = 'none';
+                    }} 
                     onBlur={e => e.target.placeholder = 'Add answer 2'}
                     sx={{margin: 'auto', height: '6.375rem'}}
                 />
                 
                 <StyledInput 
                     placeholder='Add answer 3 (optional)' 
-                    onFocus={e => e.target.placeholder = ''} 
+                    onFocus={e => {
+                        e.target.placeholder = '';
+                        e.target.style.outline = 'none';
+                    }} 
                     onBlur={e => e.target.placeholder = 'Add answer 3 (optional)'}
                     sx={{margin: 'auto', height: '6.375rem'}}
                 />
                 
                 <StyledInput 
                     placeholder='Add answer 4 (optional)' 
-                    onFocus={e => e.target.placeholder = ''} 
+                    onFocus={e => {
+                        e.target.placeholder = '';
+                        e.target.style.outline = 'none';
+                    }} 
                     onBlur={e => e.target.placeholder = 'Add answer 4 (optional)'}
                     sx={{margin: 'auto', height: '6.375rem'}}
                 />

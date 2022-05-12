@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import CreateQuestion from '../CreateQuestion';
+import CreateNav from '../CreateNav';
+import QuestionDetails from '../QuestionDetails';
 
 interface QProps {
     showNav: boolean,
@@ -15,7 +17,9 @@ export default function CreateQuiz(props: QProps) {
 
     return (
         <>
+            <CreateNav />
             <CreateQuestion />
+            {/* <QuestionDetails /> */}
         </>
     );
 }
