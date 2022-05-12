@@ -18,14 +18,13 @@ import Sidebar from './components/Sidebar';
 
 function App() {
   const [showNav, setShowNav] = useState(true);
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <BrowserRouter>
         {showNav && <Navigation />}
-      <Navigation toggle={() => setIsOpen(!isOpen)}/>
+      {showNav && <Navigation toggle={() => setIsOpen(!isOpen)}/>}
       <Sidebar isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
         {/* <Course /> */}
 
