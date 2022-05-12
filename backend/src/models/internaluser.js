@@ -8,9 +8,16 @@ module.exports = (sequelize, DataTypes) => {
   }
   Internal_User.init(
     {
-      name: DataTypes.STRING,
-      email: DataTypes.STRING,
-      oauth: DataTypes.STRING,
+      // Still not sure what this table will look like
+      name: {
+        type: DataTypes.STRING,
+      },
+      email: {
+        type: DataTypes.STRING,
+      },
+      oauth: {
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,

@@ -17,7 +17,8 @@ module.exports = {
         references: { model: 'Quizzes' },
       },
       currentQuestion: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
+        references: { model: 'Questions' },
       },
       pin: {
         type: Sequelize.STRING,
