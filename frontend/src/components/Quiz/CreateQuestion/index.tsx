@@ -25,7 +25,7 @@ const ContainerDiv = styled('div')({
     rowGap: '1rem',
 })
 
-export default function CreateQuiz() {
+export default function CreateQuestion() {
     return (
         <BackgroundDiv>
             <StyledInput 
