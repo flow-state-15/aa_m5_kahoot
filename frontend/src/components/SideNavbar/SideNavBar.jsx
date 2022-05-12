@@ -24,13 +24,16 @@ const Sidebar = styled("div")({
 });
 
 const ButtonOne = styled("button")({
-  border: "1px outset blue",
+  border: "1px",
   backgroundColor: "white",
   height: "50px",
   width: "50px",
   cursor: "pointer",
   left: "0",
   margin: ".5rem .5rem",
+  borderRadius: "1px",
+  boxShadow: "rgba(0, 0, 0, 0.3) 0px 3px 8px",
+
 });
 
 export default function SideNavBar() {
