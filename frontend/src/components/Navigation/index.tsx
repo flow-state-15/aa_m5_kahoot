@@ -19,9 +19,6 @@ type MyProps = {
 }
 
 export default function Navigation(props: MyProps) {
-
-    // console.log(props.toggle)
-
     const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     };
