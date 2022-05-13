@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   Question.associate = models => {
     Question.hasMany(models.Answer, { foreignKey: 'questionId' });
-    Question.hasMany(models.Current_Game, { foreignKey: 'currentQuestion' });
+    // Question.hasMany(models.Current_Game, { foreignKey: 'currentQuestion' });
   };
   return Question;
 };
