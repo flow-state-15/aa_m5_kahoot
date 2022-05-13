@@ -18,7 +18,6 @@ type MyProps = {
 }
 
 export const Sidebar = (props: MyProps) => {
-    console.log('????????', props.isOpen)
     let Container = SidebarContainer(props.isOpen)
 
     return (

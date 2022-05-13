@@ -9,7 +9,6 @@ type MyProps = {
 
 
 export const SidebarContainer = (isOpen: MyProps) => {
-    console.log('$$$$$$$$$$', isOpen)
     return (
         styled.div`
             position: fixed;
