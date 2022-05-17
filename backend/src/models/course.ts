@@ -1,7 +1,4 @@
-// import { Model } from 'sequelize';
 module.exports = (sequelize, DataTypes) => {
-  // class Course extends Model {}
-  // Course.init(
   const Course = sequelize.define(
     'Course',
     {
@@ -29,9 +26,5 @@ module.exports = (sequelize, DataTypes) => {
       modelName: 'Course',
     },
   );
-  Course.associate = function (models) {
-    // Course.hasMany(models.Module, { foreignKey: 'courseId' });
-    // Course.hasMany(models.Quiz, { foreignKey: 'courseId' });
-  };
   return Course;
 };

@@ -1,6 +1,5 @@
 import { Sequelize, DataTypes } from 'sequelize';
 import { NODE_ENV, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE } from '@config';
-import UserModel from '@models/users.model';
 import Answer from '@models/answer';
 import Course from '@models/course';
 import Current_Game from '@models/currentgame';
@@ -55,9 +54,9 @@ Quizzes.hasMany(Current_Games, { foreignKey: 'quizId' });
 Internal_Users.hasMany(Current_Games, { foreignKey: 'hostId' });
 Questions.hasMany(Answers, { foreignKey: 'questionId' });
 Questions.hasMany(Current_Games, { foreignKey: 'currentQuestion' });
+Current_Games.hasMany(External_Users, { foreignKey: 'gameId' });
 
 const DB = {
-  Users: UserModel(sequelize),
   Courses,
   Modules,
   Folders,

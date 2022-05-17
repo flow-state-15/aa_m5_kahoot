@@ -1,14 +1,6 @@
-'use strict';
-const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Current_Game extends Model {
-    static associate(models) {
-      Current_Game.belongsTo(models.Internal_User, { foreignKey: 'hostId' });
-      Current_Game.belongsTo(models.Quiz, { foreignKey: 'quizId' });
-      Current_Game.belongsTo(models.Question, { foreignKey: 'currentQuestion' });
-    }
-  }
-  Current_Game.init(
+  const Current_Game = sequelize.define(
+    'Current_Game',
     {
       hostId: {
         type: DataTypes.INTEGER,

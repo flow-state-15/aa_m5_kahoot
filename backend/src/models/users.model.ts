@@ -1,3 +1,4 @@
+// leaving for reference. Might take out later
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { User } from '@interfaces/users.interface';
 

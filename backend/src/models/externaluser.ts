@@ -1,12 +1,6 @@
-'use strict';
-const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class External_User extends Model {
-    static associate(models) {
-      External_User.belongsTo(models.Current_Game, { foreignKey: 'gameId' });
-    }
-  }
-  External_User.init(
+  const External_User = sequelize.define(
+    'External_User',
     {
       name: {
         type: DataTypes.STRING(50),
