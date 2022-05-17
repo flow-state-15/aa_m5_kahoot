@@ -1,5 +1,4 @@
-// import { Model } from 'sequelize';
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   const Answer = sequelize.define(
     'Answer',
     {
@@ -67,8 +66,5 @@ module.exports = (sequelize, DataTypes) => {
       modelName: 'Answer',
     },
   );
-  Answer.associate = function (models) {
-    Answer.belongsTo(models.Question, { foreignKey: 'questionId' });
-  };
   return Answer;
 };

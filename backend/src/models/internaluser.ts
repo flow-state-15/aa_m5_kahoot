@@ -1,12 +1,6 @@
-'use strict';
-const { Model } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Internal_User extends Model {
-    static associate(models) {
-      Internal_User.hasMany(models.Current_Game, { foreignKey: 'hostId' });
-    }
-  }
-  Internal_User.init(
+export default (sequelize, DataTypes) => {
+  const Internal_User = sequelize.define(
+    'Internal_User',
     {
       // Still not sure what this table will look like
       name: {

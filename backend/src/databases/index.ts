@@ -1,6 +1,5 @@
-import {Sequelize, DataTypes } from 'sequelize';
+import { Sequelize, DataTypes } from 'sequelize';
 import { NODE_ENV, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE } from '@config';
-import UserModel from '@models/users.model';
 import Answer from '@models/answer';
 import Course from '@models/course';
 import Current_Game from '@models/currentgame';
@@ -36,17 +35,37 @@ const sequelize = new Sequelize.Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {
 
 sequelize.authenticate();
 
+const Courses = Course(sequelize, DataTypes);
+const Modules = Module(sequelize, DataTypes);
+const Folders = Folder(sequelize, DataTypes);
+const Quizzes = Quiz(sequelize, DataTypes);
+const Internal_Users = Internal_User(sequelize, DataTypes);
+const Questions = Question(sequelize, DataTypes);
+const Answers = Answer(sequelize, DataTypes);
+const Current_Games = Current_Game(sequelize, DataTypes);
+const External_Users = External_User(sequelize, DataTypes);
+
+Courses.hasMany(Modules, { foreignKey: 'courseId' });
+Courses.hasMany(Quizzes, { foreignKey: 'courseId' });
+Modules.hasMany(Folders, { foreignKey: 'moduleId' });
+Modules.hasMany(Quizzes, { foreignKey: 'moduleId' });
+Folders.hasMany(Quizzes, { foreignKey: 'folderId' });
+Quizzes.hasMany(Current_Games, { foreignKey: 'quizId' });
+Internal_Users.hasMany(Current_Games, { foreignKey: 'hostId' });
+Questions.hasMany(Answers, { foreignKey: 'questionId' });
+Questions.hasMany(Current_Games, { foreignKey: 'currentQuestion' });
+Current_Games.hasMany(External_Users, { foreignKey: 'gameId' });
+
 const DB = {
-  Users: UserModel(sequelize),
-  Courses: Course(sequelize, DataTypes),
-  Modules: Module(sequelize, DataTypes),
-  Folders: Folder(sequelize, DataTypes),
-  Quizzes: Quiz(sequelize, DataTypes),
-  Internal_Users: Internal_User(sequelize, DataTypes),
-  Questions: Question(sequelize, DataTypes),
-  Answers: Answer(sequelize, DataTypes),
-  Current_Games: Current_Game(sequelize, DataTypes),
-  External_Users: External_User(sequelize, DataTypes),
+  Courses,
+  Modules,
+  Folders,
+  Quizzes,
+  Internal_Users,
+  Questions,
+  Answers,
+  Current_Games,
+  External_Users,
   sequelize, // connection instance (RAW queries)
   Sequelize, // library
 };

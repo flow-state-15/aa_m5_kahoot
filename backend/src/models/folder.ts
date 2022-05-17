@@ -1,13 +1,6 @@
-'use strict';
-const { Model } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Folder extends Model {
-    static associate(models) {
-      Folder.belongsTo(models.Module, { foreignKey: 'moduleId' });
-      Folder.hasMany(models.Quiz, { foreignKey: 'folderId' });
-    }
-  }
-  Folder.init(
+export default (sequelize, DataTypes) => {
+  const Folder = sequelize.define(
+    'Folder',
     {
       name: {
         type: DataTypes.STRING(50),
